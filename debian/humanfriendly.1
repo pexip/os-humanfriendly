@@ -1,0 +1,73 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2017 Gaurav Juvekar <gauravjuvekar@gmail.com>,
+.\"
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH humanfriendly 1 "January 19 2017"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+humanfriendly \- human friendly input/output formatter
+.SH SYNOPSIS
+.B humanfriendly
+.RI [ options ]
+.br
+.SH DESCRIPTION
+\fBhumanfriendly\fP is a program that performs human friendly input/output (text
+formatting) on the command line.
+.SH OPTIONS
+This program follow the usual GNU command line syntax, with long options
+starting with two dashes (`-').  A summary of options is included below.
+.TP
+.B \-h, \-\-help
+Show this message and exit.
+.TP
+.B \-c \fICOMMAND\fB, \-\-run\-command \fICOMMAND\fR
+Execute an external \fICOMMAND\fR (given as the positional arguments) and render
+a spinner and timer while the command is running. The exit status of the command
+is propagated.
+.TP
+.B \-\-format\-table
+Read tabular data from standard input (each line is a row and each whitespace
+separated field is a column), format the data as a table and print the resulting
+table to standard output. See also the \fB\-\-delimiter\fR option.
+.TP
+.B \-d \fIVALUE\fB, \-\-delimiter=\fIVALUE\fR
+Change the delimiter used by \fB\-\-format\-table\fR to \fIVALUE\fR (a string).
+By default all whitespace is treated as a delimiter.
+.TP
+.B \-l \fILENGTH\fB, \-\-format\-length=\fILENGTH\fR
+Convert a length count (given as the integer or float \fILENGTH\fR) into a human
+readable string and print that string to standard output.
+.TP
+.B \-n \fIVALUE\fB, \-\-format\-number=\fIVALUE\fR
+Format a number (given as the integer or floating point number \fIVALUE\fR) with
+thousands separators and two decimal places (if needed) and print the formatted
+number to standard output.
+.TP
+.B \-s \fIBYTES\fB, \-\-format\-size=\fIBYTES\fR
+Convert a byte count (given as the integer \fIBYTES\fR) into a human readable
+string and print that string to standard output.
+.TP
+.B \-t \fISECONDS\fB, \-\-format\-timespan=\fISECONDS\fR
+Convert a number of seconds (given as the floating point number \fISECONDS\fR)
+into a human readable timespan and print that string to standard output.
+.TP
+.B \-\-parse\-size=\fIVALUE\fR
+Parse a human readable data size (given as the string \fIVALUE\fR) and print the
+number of bytes to standard output.
+.TP
+.B \-\-parse\-length=\fIVALUE\fR
+Parse a human readable data length (given as the string \fIVALUE\fR) and print
+the number of bytes to standard output.

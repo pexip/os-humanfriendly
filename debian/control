@@ -1,0 +1,71 @@
+Source: humanfriendly
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Gaurav Juvekar <gauravjuvekar@gmail.com>,
+           Sandro Tosi <morph@debian.org>,
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+               python3-all,
+               python3-coloredlogs <!nocheck>,
+               python3-docutils <!nocheck>,
+               python3-mock <!nocheck>,
+               python3-pytest <!nocheck>,
+               python3-setuptools,
+               python3-sphinx <!nodoc>,
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/python-team/packages/humanfriendly
+Vcs-Git: https://salsa.debian.org/python-team/packages/humanfriendly.git
+Homepage: https://humanfriendly.readthedocs.io
+
+Package: python3-humanfriendly
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Recommends: ${python3:Recommends},
+Suggests: ${python3:Suggests},
+Description: Python3 library to make user friendly text interfaces
+ A Python3 library that can be used to make text interfaces more user friendly.
+ It provides parsing and formatting numbers, file sizes, pathnames and
+ timespans in simple human friendly formats. It provides easy to use timers for
+ long running operations, prompts for selecting a choice from a list of options
+ by typing the option's number or a unique substring of the option, and
+ terminal interaction including text styling (ANSI escape sequences), user
+ friendly rendering of usage messages and querying the terminal for its size.
+ .
+ This package installs the library for Python 3.
+
+Package: python-humanfriendly-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Description: Python3 library to make user friendly text interfaces - Documentation
+ A Python3 library that can be used to make text interfaces more user friendly.
+ It provides parsing and formatting numbers, file sizes, pathnames and
+ timespans in simple human friendly formats. It provides easy to use timers for
+ long running operations, prompts for selecting a choice from a list of options
+ by typing the option's number or a unique substring of the option, and
+ terminal interaction including text styling (ANSI escape sequences), user
+ friendly rendering of usage messages and querying the terminal for its size.
+ .
+ This package contains the documentation for humanfriendly
+
+Package: humanfriendly
+Architecture: all
+Depends: python3-humanfriendly,
+         ${misc:Depends},
+         ${python3:Depends},
+Recommends: ${python3:Recommends},
+Suggests: ${python3:Suggests},
+Description: Helper command for the humanfriendly Python3 library
+ A Python library that can be used to make text interfaces more user friendly.
+ It provides parsing and formatting numbers, file sizes, pathnames and
+ timespans in simple human friendly formats. It provides easy to use timers for
+ long running operations, prompts for selecting a choice from a list of options
+ by typing the option's number or a unique substring of the option, and
+ terminal interaction including text styling (ANSI escape sequences), user
+ friendly rendering of usage messages and querying the terminal for its size.
+ .
+ This package provides a helper command to access the functions in the library.

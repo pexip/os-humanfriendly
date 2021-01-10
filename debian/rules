@@ -1,0 +1,20 @@
+#! /usr/bin/make -f
+
+# Used as per the example from www.v13.gr/blog/?p=412
+#DPKG_EXPORT_BUILDFLAGS = 1
+
+#export DH_VERBOSE = 1
+#export PYBUILD_NAME=humanfriendly
+#export PYBUILD_AFTER_INSTALL_python2=rm -rf {destdir}/usr/bin/
+#export PYBUILD_AFTER_INSTALL_python3=rm -rf {destdir}/usr/bin/
+#export PYBUILD_INSTALL_ARGS_python3 = --install-scripts=/dev/null
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_test:
+	PYBUILD_SYSTEM=custom PYBUILD_TEST_ARGS="cd {build_dir} ;  {interpreter} -m pytest humanfriendly/tests.py" dh_auto_test
+
+override_dh_sphinxdoc:
+	python3 -m sphinx -q docs debian/python-humanfriendly-doc/usr/share/doc/python-humanfriendly-doc/html/
+	dh_sphinxdoc

@@ -1,0 +1,26 @@
+--- a/humanfriendly/tests.py
++++ b/humanfriendly/tests.py
+@@ -124,6 +124,7 @@ from humanfriendly.usage import (
+ 
+ # Test dependencies.
+ from mock import MagicMock
++import pytest
+ 
+ 
+ class HumanFriendlyTestCase(TestCase):
+@@ -1088,6 +1089,7 @@ class HumanFriendlyTestCase(TestCase):
+             self.assertEqual([], capturer.stdout.get_lines())
+             self.assertEqual([text], capturer.stderr.get_lines())
+ 
++    @pytest.mark.skip("Debian: skip until #954115 - RFP: capturer is resolved")
+     def test_generate_warning(self):
+         """Test the :func:`humanfriendly.terminal.warning()` function."""
+         from capturer import CaptureOutput
+@@ -1165,6 +1167,7 @@ class HumanFriendlyTestCase(TestCase):
+             sys.stdout = saved_stdout
+             sys.stderr = saved_stderr
+ 
++    @pytest.mark.skip("Debian: skip until #954115 - RFP: capturer is resolved")
+     def test_terminal_capabilities(self):
+         """Test the functions that check for terminal capabilities."""
+         from capturer import CaptureOutput

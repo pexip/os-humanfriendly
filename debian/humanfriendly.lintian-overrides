@@ -1,0 +1,3 @@
+# The humanfriendly package provides a helper command for a primarily
+# library-only packge.
+humanfriendly: application-in-library-section
