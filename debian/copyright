@@ -4,11 +4,12 @@ Upstream-Contact: Peter Odding <peter@peterodding.com>
 Source: https://humanfriendly.readthedocs.io
 
 Files: *
-Copyright: (c) 2020 Peter Odding <peter@peterodding.com>
+Copyright: (c) 2021 Peter Odding <peter@peterodding.com>
 License: Expat
 
 Files: debian/*
 Copyright: 2017 © Gaurav Juvekar <gauravjuvekar@gmail.com>
+ 2020-2021 Sandro Tosi <morph@debian.org>
 License: Expat
 
 License: Expat
