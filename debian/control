@@ -19,7 +19,7 @@ Rules-Requires-Root: no
 Vcs-Browser: https://salsa.debian.org/python-team/packages/humanfriendly
 Vcs-Git: https://salsa.debian.org/python-team/packages/humanfriendly.git
 Homepage: https://humanfriendly.readthedocs.io
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: python3-humanfriendly
 Architecture: all
