@@ -1,3 +1,30 @@
+humanfriendly (10.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + python-humanfriendly-doc: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 16 Oct 2022 18:17:57 +0100
+
+humanfriendly (10.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use unittest instead of pytest (Closes: #1013705)
+  * Switch to debhelper-compat 13
+  * Use dh-sequence-python3
+  * Bump Standards-Version to 4.6.1, no changes
+  * dh_missing: ignore pycache
+
+ -- Luca Boccassi <bluca@debian.org>  Fri, 29 Jul 2022 12:48:05 +0100
+
+humanfriendly (10.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/copyright
+    - update upstream copyright notice
+    - add my contribution
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 09 Oct 2021 21:16:56 -0400
+
 humanfriendly (9.1-1pexip3) pexip; urgency=medium
 
   * No-change rebuild
