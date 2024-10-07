@@ -1,1 +1,3 @@
 tests_skip_capturer.patch
+remove-python3-mock.patch
+shlex-quote.patch
