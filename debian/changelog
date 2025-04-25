@@ -1,3 +1,27 @@
+humanfriendly (10.0-6) unstable; urgency=medium
+
+  * Team upload.
+  * Replace pipes.quote with shlex.quote on Python 3
+    (https://github.com/xolox/python-humanfriendly/pull/75, closes:
+    #1084718).
+  * Remove some Python 2 packaging leftovers.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 07 Oct 2024 22:26:10 +0100
+
+humanfriendly (10.0-5) unstable; urgency=medium
+
+  * Team upload.
+  * add d/gbp.conf matching what is done on Salsa
+  * patch-out trivial usage of python3-mock
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 13 Mar 2024 02:33:56 +0100
+
+humanfriendly (10.0-4) unstable; urgency=medium
+
+  * remove myself
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 28 Feb 2024 01:24:43 -0500
+
 humanfriendly (10.0-3+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme

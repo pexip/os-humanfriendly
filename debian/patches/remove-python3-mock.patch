@@ -1,0 +1,15 @@
+From: Alexandre Detiste <tchet@debian.org>
+Subject: remove trivial usage of python3-mock
+Forwarded: https://github.com/xolox/python-humanfriendly/issues/62
+
+--- a/humanfriendly/tests.py
++++ b/humanfriendly/tests.py
+@@ -123,7 +123,7 @@
+ )
+ 
+ # Test dependencies.
+-from mock import MagicMock
++from unittest.mock import MagicMock
+ 
+ 
+ class HumanFriendlyTestCase(TestCase):

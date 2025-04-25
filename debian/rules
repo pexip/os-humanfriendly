@@ -5,7 +5,6 @@
 
 #export DH_VERBOSE = 1
 #export PYBUILD_NAME=humanfriendly
-#export PYBUILD_AFTER_INSTALL_python2=rm -rf {destdir}/usr/bin/
 #export PYBUILD_AFTER_INSTALL_python3=rm -rf {destdir}/usr/bin/
 #export PYBUILD_INSTALL_ARGS_python3 = --install-scripts=/dev/null
 
